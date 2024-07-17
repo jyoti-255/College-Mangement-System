@@ -1,0 +1,64 @@
+
+<html>
+<head>
+    <title>KIT</title>
+    <style>
+        * {
+            font-size: 40px;
+        }
+        body {
+            background-color: lightblue;
+            text-align: center;
+        }
+        .nav {
+            background-color: black;
+            padding: 10px 0;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+        }
+        table {
+            width: 70%;
+            margin: 20px auto; /* Center the table */
+            border-collapse: collapse; /* Collapse table borders */
+        }
+        table, th, td {
+            border: 1px solid black; /* Border styling */
+        }
+        th, td {
+            padding: 10px; /* Padding inside table cells */
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'dept' %}">Department</a>
+        <a href="{% url 'student' %}">Student</a>
+    </div>
+    <h1>Department Page</h1>
+    <a href="{% url 'adddept' %}">Add Department</a>
+    <br/><br/>
+    <table>
+        <tr>
+            <th>Did</th>
+            <th>Dname</th>
+            <th>Delete</th>
+        </tr>
+        {% for d in data %}
+        <tr>
+            <td>{{ d.did }}</td>
+            <td>{{ d.dname }}</td>
+            <td><a href="{% url 'removedept' id=d.did %}">Delete</a></td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="3">No departments found</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
