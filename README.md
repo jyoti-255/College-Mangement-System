@@ -3,6 +3,7 @@
 Welcome to the College Management System! This project is designed to streamline the management of college operations, including student enrollment, course management, faculty administration, and more.
 
 🌟 Features
+
 🌐 Portals
 
 1. **🏠 Home Portal**
@@ -25,3 +26,5 @@ Welcome to the College Management System! This project is designed to streamline
 - Navigate to the Department Portal to manage academic departments.
 
 - Use the Student Portal to handle student-related activities.
+
+  https://dattameghe.pythonanywhere.com/
